@@ -305,6 +305,11 @@ class NewtonVisualizer(BaseVisualizer):
             update_frequency=self.cfg.update_frequency,
         )
 
+        if hasattr(self._viewer, "show_particles"):
+            self._viewer.show_particles = self.cfg.show_particles
+        else:
+            logger.debug("Newton viewer does not expose 'show_particles'.")
+
         if self._viewer is not None:
             self._viewer.set_model(self._model)
             apply_viewer_visible_worlds(

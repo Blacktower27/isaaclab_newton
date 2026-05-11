@@ -63,3 +63,6 @@ class NewtonVisualizerCfg(VisualizerCfg):
 
     light_color: tuple[float, float, float] = (1.0, 1.0, 1.0)
     """Light color RGB [0,1]."""
+
+    show_particles: bool = True
+    """Show particle rendering in Newton viewer when supported."""
